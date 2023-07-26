@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+
+    --bkg-1: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    --bkg-2: #FFF;
+    --bkg-3: #E4EDF1;
+    --bkg-4-1: #FF9500;
+    --bkg-4-2: #dc8000;
+}
+
+body {
+    background: var(--bkg-1);
+
+    font-family: 'Montserrat', sans-serif;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+main {
+    background: var(--bkg-2);
+
+    padding: 4.8rem 6.4rem 6.4rem;
+    text-align: center;
+
+    border-radius: .5rem;
+    box-shadow: 0 2rem 5rem;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem;
+
+    max-width: 30rem;
+}
+
+.hide {
+    display: none;
+}
+
+/*      screen1         */
+
+.screen1 h1 {
+    font-size: 2.4rem;
+    
+    padding: 0 2rem;
+}
+
+.screen1 p, button {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.screen1 p {
+    font-size: 1.5rem;
+}
+
+.screen1 button {
+    background: var(--bkg-2);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.screen1 button img:hover {
+    animation: move .1s infinite;
+}
+
+/*      screen2         */
+
+
+
+.screen2 h1 {
+    font-size: 2.4rem;
+}
+
+.screen2 p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+
+    padding: 1rem;
+
+    background: var(--bkg-3);
+
+    box-shadow: .2rem .2rem .2rem 0 rgba(85, 85, 85, 0.5);
+
+    animation: appear 2s ease-in-out;
+}
+
+.screen2 img {
+    padding: 4rem 0;
+}
+
+.screen2 button {
+    font-size: 1.5rem;
+    color: #FFF;
+
+    background: var(--bkg-4-1);
+
+    padding: 1.6rem;
+
+    border: none;
+    border-radius: .4rem;
+
+    cursor: pointer;
+
+    transition: background .25s .015s ease-in-out;
+}
+
+.screen2 button:hover {
+    background: var(--bkg-4-2);
+}
+
+@keyframes move {
+    0% {
+    transform: rotateZ(2deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(15rem)
+        scale(0.1);
+    }
+    100% {
+        transform: translateY(0)
+        scale(1);  
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
